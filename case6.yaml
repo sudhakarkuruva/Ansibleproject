@@ -1,0 +1,7 @@
+---
+ - name: six case
+   hosts: vlab
+   tasks: 
+     - debug:
+         msg: "hostname comes in this server: {{ansible_hostname}}"
+#        var: ansible_hostname

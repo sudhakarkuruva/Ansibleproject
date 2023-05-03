@@ -1,0 +1,6 @@
+---
+ - name: fourth case
+   hosts: vlab
+   tasks:
+    - debug: 
+        msg: "this is my ip-->{{ansible_hostname}}"

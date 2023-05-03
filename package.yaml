@@ -1,0 +1,27 @@
+---
+ - name: multiple packages installing  
+   hosts: vlab
+   tasks: 
+     - name: install httpd packages
+       tags: httpd
+       yum: name=httpd state=present
+
+     - name: install vsftpd packages
+       tags: vsftpd
+       yum: name=vsftpd state=present
+
+     - name: install ftp packages
+       tags: ftp
+       yum: name=ftp state=present
+
+     - name: install samba packages
+       tags: samba
+       yum: name=samba state=present
+
+     - name: install finger packages
+       tags: finger
+       yum: name=finger state=present 
+
+     - name: install ntp package
+       tags: ntp
+       yum: name=ntp state=present

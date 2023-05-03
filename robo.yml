@@ -1,0 +1,8 @@
+---
+ - name: practice
+   hosts: vlab 
+   tasks: 
+    - name: installing package
+      yum: name=httpd state=present
+    - name: service activate
+      service: name=httpd state=restarted 

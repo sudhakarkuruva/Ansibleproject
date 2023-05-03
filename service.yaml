@@ -1,0 +1,24 @@
+---
+ - name: all services on
+   hosts: vlab
+   tasks:
+    - name: sshd
+      service: name=sshd state=started enabled=yes
+    
+    - name: httpd
+      service: name=httpd state=started enabled=yes
+
+    - name: vsftpd
+      service: name=vsftpd state=started enabled=yes
+
+    - name: samba
+      service: name=smb state=started enabled=yes
+
+    - name: nfs
+      service: name=nfs state=started enabled=yes
+
+    - name: autofs
+      service: name=autofs state=started enabled=yes
+     
+    - name: ntp
+      service: name=ntpd state=started enabled=yes

@@ -1,0 +1,9 @@
+---
+ - name: third case
+   hosts: vlab
+   tasks: 
+    - debug: 
+       msg: 
+        - "Infrastructure as a service"
+        - "platform as a service"
+        - "software as a service"

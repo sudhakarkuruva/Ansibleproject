@@ -1,0 +1,10 @@
+---
+ - name: modules 
+   hosts: vlab
+   tasks: 
+     - name: copying the file 
+       copy: src=/etc/ssh/sshd_config dest=/etc/ssh/
+       register: kabali
+     - name: to start the service
+       service: name=sshd state=restarted 
+       when: kabali.changed

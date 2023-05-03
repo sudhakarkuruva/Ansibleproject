@@ -1,0 +1,10 @@
+---
+ - name: as soon as possible
+   hosts: vlab
+   tasks: 
+     - name: installing httpd
+       yum: name=httpd state=present
+       notify: service
+   handlers:
+     - name: service 
+       service: name=httpd state=restarted 

@@ -1,0 +1,9 @@
+---
+ - name: seventh class 
+   hosts: vlab 
+   tasks: 
+    - debug: 
+       msg: 
+         "my hostname is {{ansible_hostname}}"
+         "ip address is {{ansible_facts'[fqdn]'}}"
+#        "my host is {{ansible_facts_default_ipv4.address}}"

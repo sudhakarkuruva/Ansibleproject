@@ -1,0 +1,11 @@
+---
+ - name: eigth case
+   hosts: vlab
+   tasks: 
+    - name: printing ip address
+      debug: 
+        msg: "my ip server is: {{ansible_default_ipv4.address}}"
+        verbosity: 1
+    - debug: 
+        msg: '{{ansible_hostname}}'
+        verbosity: 2

@@ -1,0 +1,6 @@
+---
+ - name: fifth case
+   hosts: vlab
+   tasks: 
+    - debug: 
+        var: ansible_hostname

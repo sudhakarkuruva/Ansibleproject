@@ -1,0 +1,6 @@
+---
+ - name: second case
+   hosts: vlab
+   tasks: 
+    - debug:
+       msg: "network file system"

@@ -1,0 +1,11 @@
+---
+ - name: ninth case
+   hosts: vlab
+   vars:
+    os: "linux" 
+    cloud: "aws" 
+    tools: "devops"
+   tasks: 
+    - name: debug message
+      debug:
+       msg: "i love {{os}}"

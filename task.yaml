@@ -1,0 +1,12 @@
+---
+ - name: today task
+   hosts: group
+   tasks:
+     - name: Package installing 
+       yum: name=httpd state=present
+     - name: Service starting 
+       service: name=httpd state=started enabled=yes
+     - name: website
+       file: dest=/var/www/html/ashok.html state=touch 
+     - name: adding a line in file
+       lineinfile: dest=/var/www/html/ashok.html line='welcome to varains and nareshins' 

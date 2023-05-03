@@ -1,0 +1,6 @@
+---
+ - name: package installing
+   hosts: group
+   tasks:
+    - name:
+      yum: name=ftp state=present

@@ -1,0 +1,14 @@
+---
+ - name: The life of pie
+   hosts: group
+   tasks:
+    - name: copying file
+      file: dest=/tmp/stephen state=directory mode=777
+    - name: another file creating 
+      file: dest=/tmp/hocking state=touch mode=666
+    - name: service starting
+      service: name=httpd state=started
+    - name:  
+      synchronize: src=/root/break dest=/tmp/
+    - name:
+      fetch: src=/tmp/hocking dest=/opt/hocking

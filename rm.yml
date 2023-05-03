@@ -1,0 +1,6 @@
+---
+ - name: removing 
+   hosts: vlab
+   tasks: 
+    - name: erasing the httpd packages
+      yum: name=httpd state=absent

@@ -1,0 +1,7 @@
+---
+ - name: debug is module
+   hosts: vlab
+   tasks: 
+    - debug: msg="inftrastructure as a service" 
+             
+              
