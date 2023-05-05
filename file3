@@ -1,0 +1,14 @@
+---
+ - name: lab scriping 
+   hosts: lab
+   tasks:
+#     - name: htppd package installing
+#       yum: name=httpd state=present
+#     - name: status
+#       shell: service httpd status
+     - name: httpd service 
+       service: name=httpd state=started
+     - name: creating a new file
+       file: dest=/tmp/nandhi state=touch mode=666
+     - name: display
+       shell: ls -l /tmp
