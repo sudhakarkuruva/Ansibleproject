@@ -1,0 +1,21 @@
+====================================================================================================
+
+                                       CASE-1
+#vi /etc/ansible/hosts
+
+[vlab1]
+vara-sys-1
+vara-sys-2
+
+#ansible -i /etc/ansible/hosts all -m ping
+
+====================================================================================================
+
+                                       CASE-2
+
+ [vlab1]
+vara-sys1 [1:5]
+vara-sys2 [1:5]
+
+#ansible -i /etc/ansible/hosts all -m ping
+
